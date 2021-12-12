@@ -3,11 +3,12 @@ This is a small sample of terragrunt for describing dependent feature.
 
 ```
 .
+├── Makefile
 ├── README.md
 └── envs
     └── dev
-        ├── iam
-        ├── iam_policy // it depends on `iam` resources
+        ├── iam_policy // it depends on `iam_role` resources
+        ├── iam_role
         ├── provider.tf
         ├── terragrunt.hcl
         └── version.tf

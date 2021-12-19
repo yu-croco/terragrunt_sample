@@ -25,4 +25,5 @@ graph-dependencies:
 
 .PHONY: fmt
 fmt:
-	terragrunt hclfmt
+	terragrunt hclfmt && \
+	terraform fmt --recursive

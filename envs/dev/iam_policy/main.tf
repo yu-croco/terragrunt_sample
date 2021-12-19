@@ -9,7 +9,7 @@ data "aws_iam_policy_document" "sample_policy" {
 }
 
 resource "aws_iam_policy" "sample_policy" {
-  name        = "terragrunt-sample-policy"
+  name   = "terragrunt-sample-policy"
   policy = data.aws_iam_policy_document.sample_policy.json
 }
 

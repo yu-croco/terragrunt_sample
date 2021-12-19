@@ -1,10 +1,10 @@
-resource "aws_iam_role" "ecs_task_role" {
-  name                  = "terragrunt-ecs-task-role"
-  assume_role_policy    = data.aws_iam_policy_document.ecs_task_assume_role_policy.json
+resource "aws_iam_role" "sample_role" {
+  name                  = "terragrunt-sample-role"
+  assume_role_policy    = data.aws_iam_policy_document.sample_policy.json
   force_detach_policies = false
 }
 
-data "aws_iam_policy_document" "ecs_task_assume_role_policy" {
+data "aws_iam_policy_document" "sample_policy" {
   statement {
     actions = ["sts:AssumeRole"]
 

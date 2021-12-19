@@ -1,7 +1,7 @@
 .PHONY: init-all
 init-all:
 	cd envs/dev && \
-	terragrunt run-all init
+	terragrunt run-all init -reconfigure
 
 .PHONY: plan-all
 plan-all:

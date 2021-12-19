@@ -1,9 +1,9 @@
 remote_state {
   backend = "s3"
   config = {
-    bucket = "terragrunt-sample-dev-tfstate"
-    key    = "${path_relative_to_include()}.tfstate"
-    region = "ap-northeast-1"
+    bucket  = "terragrunt-sample-dev-tfstate"
+    key     = "${path_relative_to_include()}.tfstate"
+    region  = "ap-northeast-1"
     encrypt = true
   }
 }

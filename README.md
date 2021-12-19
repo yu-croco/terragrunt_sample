@@ -1,38 +1,6 @@
 # Terragrunt Sample
-This is a small sample of terragrunt for describing dependent feature.
-
-```
-.
-├── Makefile
-├── README.md
-└── envs
-    └── dev
-        ├── iam_policy // it depends on `iam_role` resources
-        ├── iam_role
-        ├── provider.tf
-        ├── terragrunt.hcl
-        └── version.tf
-```
-
-## commands
-
-```
-# exec individually
-$ cd envs/dev/${resource_name}
-$ terragrunt ${init|plan|apply|destroy}
-
-# exec to all resource
-$ terragrunt run-all ${init|plan|apply|destroy}
-
-# show dependencies
-$ terragrunt graph-dependencies
-# below is shown
-# digraph {
-# 	"iam" ;
-# 	"iam_policy" ;
-# 	"iam_policy" -> "iam";
-# }
-```
+This is a small sample of Terragrunt.
+Please read [this article](https://zenn.dev/nameless_gyoza/articles/terragrunt-hands-on) for more details.
 
 # References
 - [TerragruntでTerraformのbackend周りのコードをDRYにする](https://dev.classmethod.jp/articles/terragrunt-makes-your-terraform-backend-code-dry/)
